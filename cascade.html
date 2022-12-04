@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>CASCADE</title>
+        <script src="javascript/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene>
+            <a-assets>
+                <video id="cascade" src="videos/cascade.mp4" autoplay></video>
+            </a-assets>
+
+              <a-camera>
+                <a-cursor></a-cursor>
+              </a-camera>
+
+              <a-videosphere src="#cascade"></a-videosphere>
+        </a-scene>
+    </body>
+</html>

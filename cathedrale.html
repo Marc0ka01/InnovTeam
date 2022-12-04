@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>CATHEDRALE</title>
+        <script src="javascript/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene>
+            <a-assets>
+                <video id="cathedrale" src="videos/cathe.mp4" autoplay></video>
+            </a-assets>
+
+              <a-camera>
+                <a-cursor></a-cursor>
+              </a-camera>
+
+              <a-videosphere src="#cathedrale"></a-videosphere>
+        </a-scene>
+    </body>
+</html>

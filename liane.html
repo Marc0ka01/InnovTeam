@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>LIANE</title>
+        <script src="javascript/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene>
+            <a-assets>
+                <video id="liane" src="videos/liane.mp4" autoplay></video>
+            </a-assets>
+
+              <a-camera>
+                <a-cursor></a-cursor>
+              </a-camera>
+
+              <a-videosphere src="#liane"></a-videosphere>
+        </a-scene>
+    </body>
+</html>

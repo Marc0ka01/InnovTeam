@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script src="javascript/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v$npm_package_version/dist/aframe-physics-system.min.js"></script>
+
+    <script src="https://www.lokeldigital.com/shared-code/a-frame/onclick.js"></script>
+  </head>
+  <body>
+    <script>
+
+AFRAME.registerComponent('pushableobject', {
+      init: function () {
+        let el = this.el;
+        el.addEventListener('click', function () {
+          window.location.href = 'Musee.html';
+
+        });
+      },
+
+    });
+
+    </script>
+    <a-scene physics="debug: true">
+
+        <a-camera dynamic-body position="-5.459 3.382 12.185">
+            <a-cursor></a-cursor>
+          </a-camera>
+         <!-- card interface utilisateur -->
+    <a-entity geometry="primitive:plane; width:20; height: 10;" material="color: #333;" position="-0.034 7.684 -17.720"
+    rotation="0 0 0" scale="1.506 1.489 1.000">
+    <a-entity text="value: Akwaba;width: 20;" position="8 4 0.230"></a-entity>
+    <a-entity position="0 1.5 0.230">
+      <a-entity text="value: Demarrer un voyage immersif dans VR-Ivoire;align:center;width:17;"></a-entity>
+      <a-entity text="value:;align:center;width:17;" position="0 -1 0.230"></a-entity>
+    </a-entity>
+    <a-entity pushableobject text="value:Commmencer;color:#000;width:19;align:center;" geometry="primitive:plane;width:10;height:2;" material="color:#fff;" position="0 -2 0.25"></a-entity>
+    </a-entity>
+    
+  </a-entity>
+
+  <a-entity static-body position="-8.942 0.107 -1.994" rotation="0.000 180 0.000" scale="2.155 2.610 1.406" gltf-model="cadres/comptoir.gltf"></a-entity>
+
+  <a-entity static-body position="-8.777 0.107 -4.291" rotation="-90 180 180" scale="0.294 0.284 0.285" gltf-model="cadres/femme.gltf"></a-entity>
+
+
+      <a-plane position="0 0.202 -0.386" rotation="-90 0 0" scale="7.802 8.664 1.000" width="4" height="4" color="#7BC8A4" onclick="whenClicked('red')"></a-plane>
+
+      
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
